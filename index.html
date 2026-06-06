@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEST_U Electronics – Powerful Sound. Trusted Performance.</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --blue:#1a3fa8;
+  --blue2:#2255cc;
+  --blue-light:#e8f0ff;
+  --dark:#111827;
+  --gray:#f4f6fb;
+  --text:#222;
+  --muted:#666;
+  --border:#dce3f0;
+  --gold:#f59e0b;
+}
+body{font-family:'Open Sans',sans-serif;color:var(--text);background:#fff;}
+
+/* NAV */
+nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:68px;background:#fff;
+  border-bottom:1.5px solid var(--border);
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 12px rgba(26,63,168,0.07);
+}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-logo-icon{
+  width:44px;height:44px;border-radius:50%;
+  border:2.5px solid var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:900;color:var(--blue);font-family:'Montserrat',sans-serif;
+}
+.nav-logo-text{font-family:'Montserrat',sans-serif;font-weight:900;font-size:17px;line-height:1.15;color:var(--blue);}
+.nav-logo-text span{display:block;font-size:10px;font-weight:600;letter-spacing:2px;color:var(--muted);}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links a{text-decoration:none;font-size:13px;font-weight:600;color:var(--dark);letter-spacing:0.5px;position:relative;}
+.nav-links a.active{color:var(--blue);}
+.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--blue);border-radius:2px;}
+.nav-links a:hover{color:var(--blue);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.btn-wa{
+  background:var(--blue);color:#fff;
+  border:none;border-radius:6px;
+  padding:9px 20px;font-size:13px;font-weight:600;
+  cursor:pointer;display:flex;align-items:center;gap:7px;
+  text-decoration:none;transition:background .2s;
+}
+.btn-wa:hover{background:var(--blue2);}
+.btn-wa::before{content:'💬';}
+
+/* HERO */
+.hero{
+  background:linear-gradient(120deg,#e8f0ff 0%,#f0f5ff 50%,#dce8ff 100%);
+  padding:60px 40px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:40px;min-height:420px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;right:-80px;top:-80px;
+  width:400px;height:400px;border-radius:50%;
+  background:rgba(26,63,168,0.06);
+}
+.hero-left{flex:1;max-width:480px;z-index:1;}
+.hero-badge{
+  display:inline-block;background:var(--blue);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  padding:5px 14px;border-radius:20px;margin-bottom:18px;text-transform:uppercase;
+}
+.hero-title{
+  font-family:'Montserrat',sans-serif;
+  font-size:52px;font-weight:900;line-height:1;
+  color:var(--blue);margin-bottom:4px;letter-spacing:-1px;
+}
+.hero-title2{
+  font-family:'Montserrat',sans-serif;
+  font-size:52px;font-weight:900;line-height:1;
+  color:var(--dark);margin-bottom:16px;letter-spacing:-1px;
+}
+.hero-tagline{font-size:18px;font-weight:600;color:var(--dark);margin-bottom:10px;}
+.hero-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:28px;}
+.hero-icons{display:flex;gap:28px;flex-wrap:wrap;}
+.hero-icon-item{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;}
+.hero-icon-circle{
+  width:52px;height:52px;border-radius:50%;
+  border:1.5px solid var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;background:#fff;
+}
+.hero-icon-label{font-size:11px;font-weight:600;color:var(--dark);max-width:80px;line-height:1.3;}
+
+.hero-right{
+  flex:1;max-width:520px;
+  display:flex;align-items:center;justify-content:center;
+  z-index:1;
+}
+.hero-products-stage{
+  background:rgba(255,255,255,0.6);
+  border-radius:50%;
+  width:380px;height:260px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.hero-products-emoji{
+  font-size:80px;text-align:center;
+  animation:float 3s ease-in-out infinite;
+  line-height:1;
+}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.hero-sub-emojis{
+  position:absolute;bottom:20px;
+  display:flex;gap:12px;font-size:36px;
+}
+
+/* PRODUCTS */
+.section{padding:56px 40px;}
+.section-title{
+  font-family:'Montserrat',sans-serif;
+  font-size:28px;font-weight:800;text-align:center;
+  color:var(--dark);margin-bottom:6px;
+}
+.section-underline{
+  width:48px;height:3px;background:var(--blue);
+  border-radius:2px;margin:0 auto 36px;
+}
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(185px,1fr));
+  gap:18px;
+}
+.product-card{
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:12px;padding:20px 16px 16px;
+  transition:box-shadow .2s,transform .2s;
+  text-align:center;
+}
+.product-card:hover{
+  box-shadow:0 8px 28px rgba(26,63,168,0.13);
+  transform:translateY(-3px);
+  border-color:var(--blue);
+}
+.product-img{
+  width:100%;height:120px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:52px;margin-bottom:12px;
+}
+.product-name{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--dark);margin-bottom:3px;}
+.product-desc{font-size:11px;color:var(--muted);margin-bottom:10px;}
+.product-price{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--blue);margin-bottom:10px;}
+.product-old{font-size:12px;color:#999;text-decoration:line-through;margin-left:4px;font-weight:400;}
+.btn-buy{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#fff;color:var(--blue);
+  border:1.5px solid var(--blue);
+  border-radius:6px;padding:7px 16px;
+  font-size:12px;font-weight:600;cursor:pointer;
+  transition:all .2s;text-decoration:none;
+}
+.btn-buy:hover{background:var(--blue);color:#fff;}
+.btn-buy::before{content:'🛒';font-size:12px;}
+
+/* TRUST BAR */
+.trust-bar{
+  background:var(--blue-light);
+  display:flex;align-items:center;justify-content:center;
+  gap:60px;padding:28px 40px;flex-wrap:wrap;
+  border-top:1.5px solid var(--border);
+  border-bottom:1.5px solid var(--border);
+}
+.trust-item{display:flex;align-items:center;gap:12px;}
+.trust-icon{font-size:30px;}
+.trust-text h4{font-size:13px;font-weight:700;color:var(--dark);}
+.trust-text p{font-size:11px;color:var(--muted);}
+
+/* ===== SPECIAL OFFER BANNER ===== */
+.offer-section{
+  background:linear-gradient(135deg,#0a1628 0%,#1a2f55 60%,#0f2040 100%);
+  padding:48px 40px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.offer-section::before{
+  content:'★ SPECIAL OFFER ★';
+  position:absolute;top:16px;left:0;right:0;
+  font-size:11px;letter-spacing:4px;color:rgba(250,199,117,0.5);font-weight:700;
+}
+.offer-stars{
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  pointer-events:none;
+}
+.offer-glow{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(55,138,221,0.18) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+.offer-pill{
+  display:inline-block;
+  background:rgba(250,199,117,0.15);
+  border:1px solid rgba(250,199,117,0.5);
+  color:#FAC775;font-size:11px;font-weight:700;
+  letter-spacing:3px;padding:6px 20px;border-radius:30px;
+  text-transform:uppercase;margin-bottom:18px;
+}
+.offer-headline{
+  font-family:'Montserrat',sans-serif;
+  font-size:30px;font-weight:900;color:#fff;
+  margin-bottom:6px;
+}
+.offer-headline span{color:#FAC775;}
+.offer-sub{font-size:13px;color:#85B7EB;margin-bottom:32px;}
+
+.offer-cards{
+  display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:36px;
+}
+.offer-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(55,138,221,0.3);
+  border-radius:16px;padding:22px 24px;
+  text-align:left;width:220px;
+  transition:border-color .3s,transform .2s;
+}
+.offer-card:hover{border-color:#378ADD;transform:translateY(-4px);}
+.offer-card-img{font-size:44px;margin-bottom:12px;text-align:center;}
+.offer-card-tag{
+  font-size:9px;letter-spacing:2px;color:#FAC775;
+  text-transform:uppercase;margin-bottom:4px;
+}
+.offer-card-name{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;}
+.offer-card-spec{font-size:11px;color:#85B7EB;line-height:1.6;margin-bottom:12px;}
+.offer-card-price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.offer-new{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#FAC775;}
+.offer-old{font-size:12px;color:#555;text-decoration:line-through;}
+.offer-badge{
+  background:#E24B4A;color:#fff;
+  font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:20px;
+}
+
+.offer-btn{
+  background:#378ADD;color:#fff;border:none;
+  padding:13px 40px;border-radius:30px;
+  font-size:14px;font-weight:700;letter-spacing:1px;
+  cursor:pointer;margin-bottom:20px;
+  transition:background .2s,transform .2s;
+  text-transform:uppercase;
+}
+.offer-btn:hover{background:#185FA5;transform:scale(1.04);}
+.offer-hint{font-size:11px;color:#85B7EB;letter-spacing:1.5px;}
+
+/* ===== PASSWORD SECTION ===== */
+.pw-section{
+  background:#f8faff;
+  border-top:2px solid var(--border);
+  padding:56px 40px;text-align:center;
+}
+.pw-lock{font-size:44px;margin-bottom:14px;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+.pw-title{
+  font-family:'Montserrat',sans-serif;
+  font-size:22px;font-weight:800;color:var(--dark);margin-bottom:6px;
+}
+.pw-hint-box{
+  display:inline-block;
+  background:var(--blue-light);
+  border:1px solid #c5d5f5;
+  border-radius:10px;padding:8px 20px;
+  font-size:12px;color:var(--blue);font-weight:600;
+  margin-bottom:22px;letter-spacing:0.5px;
+}
+.pw-input{
+  display:block;margin:0 auto 14px;
+  width:200px;text-align:center;
+  font-size:30px;letter-spacing:12px;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  border:2px solid var(--border);border-radius:12px;
+  padding:12px 14px;outline:none;color:var(--blue);
+  background:#fff;transition:border-color .3s;
+}
+.pw-input:focus{border-color:var(--blue);}
+.pw-submit{
+  background:var(--blue);color:#fff;border:none;
+  padding:12px 36px;border-radius:30px;
+  font-size:14px;font-weight:700;letter-spacing:1px;
+  cursor:pointer;text-transform:uppercase;
+  transition:background .2s,transform .2s;
+}
+.pw-submit:hover{background:var(--blue2);transform:scale(1.04);}
+.pw-error{
+  color:#E24B4A;font-size:12px;margin-top:10px;
+  opacity:0;transition:opacity .3s;font-weight:600;
+}
+.pw-error.show{opacity:1;}
+
+/* ===== MESSAGE SECTION ===== */
+#message-section{
+  display:none;
+  background:linear-gradient(135deg,#0a1628 0%,#1a2f55 60%,#0f2040 100%);
+  padding:56px 40px;text-align:center;
+  animation:fadeIn 1s ease;
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+#music-bar{
+  display:none;
+  align-items:center;gap:10px;justify-content:center;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(55,138,221,0.3);
+  border-radius:30px;padding:10px 28px;
+  margin:0 auto 28px;width:fit-content;
+  font-size:13px;color:#85B7EB;
+}
+.music-disc{
+  font-size:22px;animation:spin 3s linear infinite;display:inline-block;
+}
+@keyframes spin{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+
+.msg-from{
+  font-size:11px;letter-spacing:3px;color:#FAC775;
+  text-transform:uppercase;margin-bottom:6px;
+}
+.msg-to{
+  font-family:'Montserrat',sans-serif;
+  font-size:28px;font-weight:800;color:#fff;margin-bottom:28px;
+}
+.msg-box{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:18px;padding:32px 36px;
+  max-width:640px;margin:0 auto 32px;text-align:left;
+  min-height:160px;
+}
+#typed-text{
+  font-size:16px;line-height:1.9;color:#E6F1FB;
+  white-space:pre-wrap;font-family:'Open Sans',sans-serif;
+}
+.cursor{
+  display:inline-block;width:2px;height:20px;
+  background:#378ADD;margin-left:3px;vertical-align:middle;
+  animation:blink .7s infinite;
+}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+/* Cafe card */
+#cafe-card{
+  display:none;
+  background:rgba(250,199,117,0.08);
+  border:1px solid rgba(250,199,117,0.35);
+  border-radius:16px;padding:26px 32px;
+  max-width:520px;margin:0 auto 28px;
+  animation:fadeIn .8s ease;
+}
+.cafe-title{
+  font-size:12px;letter-spacing:2.5px;color:#FAC775;
+  text-transform:uppercase;margin-bottom:16px;font-weight:700;
+}
+.cafe-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;
+}
+.cafe-item{
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;padding:12px 16px;text-align:left;
+}
+.cafe-label{font-size:10px;letter-spacing:1.5px;color:#85B7EB;margin-bottom:4px;text-transform:uppercase;}
+.cafe-value{font-size:16px;color:#fff;font-weight:600;font-family:'Montserrat',sans-serif;}
+.cafe-footer{font-size:13px;color:#FAC775;font-style:italic;}
+
+/* FOOTER */
+footer{
+  background:#0d1b3e;color:#fff;
+  padding:48px 40px 28px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:32px;margin-bottom:36px;
+}
+.footer-brand{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:#fff;margin-bottom:8px;}
+.footer-brand span{color:#378ADD;}
+.footer-desc{font-size:12px;color:#8899bb;line-height:1.8;}
+.footer-col h4{font-size:13px;font-weight:700;letter-spacing:1.5px;color:#fff;margin-bottom:14px;text-transform:uppercase;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{font-size:12px;color:#8899bb;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.footer-col ul li::before{content:'✓';color:#378ADD;font-size:11px;}
+.footer-contact li::before{content:'';display:none;}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,0.08);margin-bottom:20px;}
+.footer-bottom{text-align:center;font-size:11px;color:#556;}
+
+/* circuit pattern */
+.circuit{
+  position:absolute;right:30px;top:80px;
+  width:180px;opacity:0.07;pointer-events:none;
+  font-size:120px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">B</div>
+    <div class="nav-logo-text">BEST_U<span>ELECTRONICS</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">HOME</a></li>
+    <li><a href="#products">PRODUCTS ▾</a></li>
+    <li><a href="#about">ABOUT US</a></li>
+    <li><a href="#">WHY CHOOSE US</a></li>
+    <li><a href="#contact">CONTACT US</a></li>
+  </ul>
+  <div class="nav-right">
+    
+    
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">🏆 India's Trusted Brand</div>
+    <div class="hero-title">BEST_U</div>
+    <div class="hero-title2">ELECTRONICS</div>
+    <div class="hero-tagline">Powerful Sound. Trusted Performance.</div>
+    <p class="hero-desc">Manufacturers of Amplifiers, DTH Systems,<br>Soundbars, Home Theaters &amp; Tower Speakers.</p>
+    <div class="hero-icons">
+      <div class="hero-icon-item">
+        <div class="hero-icon-circle">🛡️</div>
+        <div class="hero-icon-label">Premium Quality Components</div>
+      </div>
+      <div class="hero-icon-item">
+        <div class="hero-icon-circle">⚙️</div>
+        <div class="hero-icon-label">Advanced Technology</div>
+      </div>
+      <div class="hero-icon-item">
+        <div class="hero-icon-circle">⭐</div>
+        <div class="hero-icon-label">Reliable Performance</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-products-stage">
+      <div>
+        <div class="hero-products-emoji">🔊</div>
+        <div class="hero-sub-emojis">🎛️ 📺 🔉</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="section-title">OUR PRODUCTS</div>
+  <div class="section-underline"></div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img">🎛️</div>
+      <div class="product-name">4440 Amplifier</div>
+      <div class="product-desc">High Performance Amplifier</div>
+      <div class="product-price">₹799</div>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <div class="product-img">🔊</div>
+      <div class="product-name">5200 Amplifier</div>
+      <div class="product-desc">Heavy Duty Performance</div>
+      <div class="product-price">₹2,499</div>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <div class="product-img">⚡</div>
+      <div class="product-name">Class-D Amplifier</div>
+      <div class="product-desc">High Efficiency Class-D</div>
+      <div class="product-price">₹3,999</div>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <div class="product-img">📺</div>
+      <div class="product-name">MPEG-4 DTH Box</div>
+      <div class="product-desc">Full HD Digital Set Top Box</div>
+      <div class="product-price">₹699</div>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <div class="product-img">🔉</div>
+      <div class="product-name">Bluetooth Soundbar</div>
+      <div class="product-desc">Crystal Clear Sound</div>
+      <div class="product-price">₹1,999</div>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <div class="product-img">🎵</div>
+      <div class="product-name">Home Theater</div>
+      <div class="product-desc">Powerful Bass &amp; Clear Sound</div>
+      <div class="product-price">₹4,999</div>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <div class="product-img">📢</div>
+      <div class="product-name">Tower Speaker</div>
+      <div class="product-desc">Deep Bass &amp; High Clarity</div>
+      <div class="product-price">₹7,999</div>
+      <a href="#" class="btn-buy">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <span class="trust-icon">🛡️</span>
+    <div class="trust-text"><h4>Quality Assured</h4><p>100% Tested Products</p></div>
+  </div>
+  <div class="trust-item">
+    <span class="trust-icon">⭐</span>
+    <div class="trust-text"><h4>Best Price</h4><p>Affordable for Everyone</p></div>
+  </div>
+  <div class="trust-item">
+    <span class="trust-icon">🚚</span>
+    <div class="trust-text"><h4>Fast Delivery</h4><p>Pan India Delivery</p></div>
+  </div>
+  <div class="trust-item">
+    <span class="trust-icon">🎧</span>
+    <div class="trust-text"><h4>Customer Support</h4><p>We are here to help you</p></div>
+  </div>
+</div>
+
+<!-- SPECIAL OFFER BANNER -->
+<section class="offer-section" id="special-offer">
+  <div class="offer-glow"></div>
+  <div class="offer-pill">🎁 Limited Time Offer</div>
+  <div class="offer-headline">Special Offer <span>For You</span></div>
+  <div class="offer-sub">Exclusive deals handpicked just for our valued customers</div>
+  <div class="offer-cards">
+    <div class="offer-card">
+      <div class="offer-card-img">🎛️</div>
+      <div class="offer-card-tag">⭐ Best Seller</div>
+      <div class="offer-card-name">ProSound X5 Amplifier</div>
+      <div class="offer-card-spec">500W RMS • 2-Channel<br>Bluetooth 5.0 • Remote</div>
+      <div class="offer-card-price">
+        <span class="offer-new">₹8,499</span>
+        <span class="offer-old">₹12,999</span>
+        <span class="offer-badge">35% OFF</span>
+      </div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-card-img">🔊</div>
+      <div class="offer-card-tag">🔥 Hot Deal</div>
+      <div class="offer-card-name">BassMax Home Theater</div>
+      <div class="offer-card-spec">1000W Peak • 5.1 Channel<br>Dolby Surround • HDMI</div>
+      <div class="offer-card-price">
+        <span class="offer-new">₹11,999</span>
+        <span class="offer-old">₹18,500</span>
+        <span class="offer-badge">35% OFF</span>
+      </div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-card-img">📢</div>
+      <div class="offer-card-tag">💎 Premium</div>
+      <div class="offer-card-name">TowerMax Speaker Pair</div>
+      <div class="offer-card-spec">600W • Floor Standing<br>Deep Bass • Hi-Fi Sound</div>
+      <div class="offer-card-price">
+        <span class="offer-new">₹9,999</span>
+        <span class="offer-old">₹15,999</span>
+        <span class="offer-badge">37% OFF</span>
+      </div>
+    </div>
+  </div>
+  <div class="offer-hint">🔒 Enter password below to unlock a personal message</div>
+</section>
+
+<!-- PASSWORD SECTION -->
+<section class="pw-section" id="pw-section">
+  <div class="pw-lock">🔒</div>
+  <div class="pw-title">Enter Password to Continue</div>
+  <div class="pw-hint-box">💡 Password is the same as the one on the visiting card</div>
+  <input type="password" class="pw-input" id="pw-input" maxlength="4" placeholder="••••" />
+  <button class="pw-submit" onclick="checkPassword()">Unlock</button>
+  <div class="pw-error" id="pw-error">❌ Wrong password. Try again!</div>
+</section>
+
+<!-- MESSAGE SECTION -->
+<section id="message-section">
+  <div id="music-bar">
+    <span class="music-disc">💿</span>
+    <span>Playing a song just for you...</span>
+  </div>
+  <div class="msg-from">A message from</div>
+  <div class="msg-to">Hi Marya 💙</div>
+  <div class="msg-box">
+    <span id="typed-text"></span><span class="cursor" id="cursor"></span>
+  </div>
+  <div id="cafe-card">
+    <div class="cafe-title">☕ Cafe Invite — Aaj ke liye</div>
+    <div class="cafe-grid">
+      <div class="cafe-item">
+        <div class="cafe-label">📍 Location</div>
+        <div class="cafe-value">Krishna Nagar</div>
+      </div>
+      <div class="cafe-item">
+        <div class="cafe-label">🕓 Time</div>
+        <div class="cafe-value">Tum decide karo</div>
+      </div>
+    </div>
+    <div class="cafe-footer">Please aaj cafe chalo... sirf 10–15 minute baat karni hai 🙏</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">BEST_U <span>ELECTRONICS</span></div>
+      <p class="footer-desc">BEST_U ELECTRONICS is a trusted name in electronics industry. We manufacture high quality products with latest technology and best quality components.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Products</h4>
+      <ul>
+        <li>Amplifiers</li>
+        <li>DTH Systems</li>
+        <li>Soundbars</li>
+        <li>Home Theaters</li>
+        <li>Tower Speakers</li>
+        <li>And More</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li>Home</li>
+        <li>Products</li>
+        <li>About Us</li>
+        <li>Why Choose Us</li>
+        <li>Contact Us</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li></li>
+        <li>✉️ bestuelectronics@gmail.com</li>
+        <li>📍 Krishna Nagar, Delhi, India</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-bottom">© 2025 BEST_U Electronics. All rights reserved.</div>
+</footer>
+
+<!-- Audio -->
+<audio id="bg-music" loop>
+  <source src="sad.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Stars in offer section
+  const offerSec = document.querySelector('.offer-section');
+  for(let i=0;i<60;i++){
+    const s=document.createElement('div');
+    s.style.cssText=`position:absolute;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;
+      background:rgba(255,255,255,${Math.random()*0.4+0.1});border-radius:50%;
+      left:${Math.random()*100}%;top:${Math.random()*100}%;
+      animation:twinkle ${Math.random()*3+2}s ${Math.random()*2}s infinite alternate;pointer-events:none;`;
+    offerSec.appendChild(s);
+  }
+  const style=document.createElement('style');
+  style.textContent='@keyframes twinkle{0%{opacity:.1}100%{opacity:.8}}';
+  document.head.appendChild(style);
+
+  // Password
+  document.getElementById('pw-input').addEventListener('keydown',function(e){
+    if(e.key==='Enter') checkPassword();
+  });
+
+  function checkPassword(){
+    const val=document.getElementById('pw-input').value;
+    const err=document.getElementById('pw-error');
+    if(val==='1914'){
+      document.getElementById('pw-section').style.display='none';
+      const ms=document.getElementById('message-section');
+      ms.style.display='block';
+      ms.scrollIntoView({behavior:'smooth',block:'start'});
+      startExperience();
+    } else {
+      err.classList.add('show');
+      document.getElementById('pw-input').value='';
+      setTimeout(()=>err.classList.remove('show'),2500);
+    }
+  }
+
+  function startExperience(){
+    const music=document.getElementById('bg-music');
+    music.play().catch(()=>{});
+    document.getElementById('music-bar').style.display='flex';
+
+    const fullText = `Agar tum ye page dekh rahi ho, toh bas itna kehna chahta hoon ki agar maine kabhi tumhe hurt kiya ho, toh uske liye sincerely sorry.
+
+Mujhe aaj tak samajh nahi aaya ki maine kya galti ki, lekin mera intention kabhi tumhe pareshan karna nahi tha.
+
+Main tumhari feelings aur decisions ki respect karta hoon.
+
+Agar tum comfortable ho aur sirf agar tumhara mann ho, toh aaj Krishna Nagar ke kisi cafe mein 10–15 minute baat kar sakte hain. Time aur place tum decide kar sakti ho.
+
+Agar tum nahi aana chahti, toh main tumhare decision ki respect karunga.
+
+Mujhe whatsapp per hi message kar dena main tumhe lene aa jaunga.
+
+– Gautam 💙`;
+
+    const el=document.getElementById('typed-text');
+    const cursor=document.getElementById('cursor');
+    let i=0;
+
+    function type(){
+      if(i<fullText.length){
+        if(fullText[i]==='\n'){el.innerHTML+='<br>';}
+        else{el.innerHTML+=fullText[i];}
+        i++;
+        const delay=fullText[i-1]==='.'||fullText[i-1]==='!'?400:
+                    fullText[i-1]===','?200:
+                    Math.random()*45+25;
+        setTimeout(type,delay);
+      } else {
+        cursor.style.display='none';
+        setTimeout(()=>{
+          document.getElementById('cafe-card').style.display='block';
+        },600);
+      }
+    }
+    setTimeout(type,1000);
+  }
+</script>
+</body>
+</html>
